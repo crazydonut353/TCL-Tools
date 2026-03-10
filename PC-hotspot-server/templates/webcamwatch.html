@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+    font-family:sans-serif;
+    text-align:center;
+    font-size:6vw;
+}
+
+select, button{
+    font-size:6vw;
+    margin:2vh;
+}
+
+img{
+    width:95%;
+    margin-top:3vh;
+}
+</style>
+</head>
+
+<body>
+
+<h1>WebcamWatch</h1>
+
+<form method="get" action="/capture">
+
+<select name="cam">
+
+{% for cam in cameras %}
+<option value="{{cam}}">Camera {{cam}}</option>
+{% endfor %}
+
+</select>
+
+<br>
+
+<button type="submit">Take Photo</button>
+
+</form>
+
+<br>
+<a href="/">Back</a>
+
+</body>
+</html>
